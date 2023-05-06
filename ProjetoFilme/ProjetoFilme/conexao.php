@@ -1,6 +1,6 @@
 <?php
 	$servidor="localhost";
-	$banco="dbaula";
+	$banco="bd_projetofilme";
 	$usuario="root";
 	$senha="";
 

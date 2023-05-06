@@ -1,0 +1,13 @@
+body{
+    width: 100vh;
+    box-sizing: border-box;
+    background-color: #1a1a1a;
+}
+
+div{
+    color: aliceblue;
+    font-size: 45px;
+    margin-left: 10%;
+    margin-top: 5%;
+    font-family: monospace;
+}
