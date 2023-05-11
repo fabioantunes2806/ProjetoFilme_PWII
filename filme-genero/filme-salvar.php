@@ -7,9 +7,9 @@
     include("conexao.php");
 
     $stmt = $pdo->prepare("insert into filmes
-    values(null,'$Nome_filme','$duracao','$classificacao_indicativa','$mensagem')");	    
-	$id_genero ->execute();    
+    values(null,'$Nome_filme','$duracao','$classificacao_indicativa','$id_genero')");	    
+	$stmt ->execute();    
 
-    header("location:Cadastro_filmes.php");    
+    header("location:cadastro-filme.php");    
     
 ?>
