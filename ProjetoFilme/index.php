@@ -6,7 +6,7 @@
         </div>
 
         <div id="infoDestaque">
-            <img src="img/opred.jpg" alt="Capa One Piece Film: RED" id="capaDestaque">
+            <img src="img/opred.jpg" alt="Capa One Piece Film: RED" id="cartazDestaque">
             
             <p><strong>DIRETOR DE ANIMAÇÃO</strong></p><br>
             <p>Goro Taniguchi</p><br>
@@ -25,20 +25,28 @@
         <h1 class="titulo">Fantasia</h1>
 
         <div class="caixaFilme">
-            <img src="img/chihiro.jpg" alt="Capa A Viagem de Chihiro" class="filmeFantasia">
-            <img src="img/yugioh.jpg" alt="Capa Yu-gi-oh - O Lado Negro das Dimensões" class="filmeFantasia">
-            <img src="img/malevola.jpg" alt="Capa Malévola - Dona do Mal" class="filmeFantasia">
+            <img src="img/chihiro.jpg" alt="Cartaz A Viagem de Chihiro" class="proporcaoFilme">
+            <img src="img/yugioh.jpg" alt="Cartaz Yu-gi-oh - O Lado Negro das Dimensões" class="proporcaoFilme">
+            <img src="img/malevola.jpg" alt="Cartaz Malévola - Dona do Mal" class="proporcaoFilme">
         </div>
     </section>
 
     <section id="terror">
         <h1 class="titulo">Terror</h1>
 
-        <div>
-            
+        <div class="caixaFilme">
+            <img src="img/InvocacaoDoMal1.jpg" alt="Cartaz Primeiro Invocação do Mal" class="proporcaoFilme">
+            <img src="img/aCasadoTerror.jpg" alt="Cartaz A Casa do Terror" class="proporcaoFilme">
+            <img src="img/oExorcista.jpg" alt="Cartaz O Exorcista" class="proporcaoFilme">
         </div>
     </section>
 
-    <section id="">
-        <h1 class="titulo"></h1>
+    <section id="acaoAventura">
+        <h1 class="titulo">Ação e Aventura</h1>
+
+        <div class="caixaFilme">
+            <img src="img/DoutorEstranho2.jpeg" alt="Cartaz Doutor Estranho no Multiverso da Loucura" class="proporcaoFilme">
+            <img src="img/velozeseFuriosos7.jpg" alt="Cartaz Velozes e Furiosos 7" class="proporcaoFilme">
+            <img src="img/jumanji2.jpg" alt="Cartaz Jumanji: Bem-vindo á Selva" class="proporcaoFilme">
+        </div>
     </section>

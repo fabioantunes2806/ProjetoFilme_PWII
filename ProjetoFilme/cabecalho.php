@@ -10,3 +10,10 @@
     <link rel="stylesheet" href="css/style.css"></link>
 </head>
 <body>
+    <header id="cabecalho">
+        <nav>
+            <a href="./index.php">Ínicio</a>
+            <a href="">Filmes</a>
+            <a href="../contato/contato.php">Contato</a>
+        </nav>
+    </header>
