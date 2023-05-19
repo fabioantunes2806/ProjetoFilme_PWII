@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+
+#cabecalho {
+    display: flex;
+}
+
+.cabecalho__links{
+    width: 100%;
+    text-align: center;
+}
+
+.cabecalho__links__link{
+    font-family: 'Krona One', sans-serif;
+    font-size: 24px;
+    background-color: aqua;
+    border-radius: 15px;
+    text-decoration: none;
+    margin: 5%;
+}

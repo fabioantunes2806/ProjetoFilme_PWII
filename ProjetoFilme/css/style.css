@@ -84,7 +84,8 @@ strong{
 }
 
 #cabecalho{
-    display: flex   ;
+    display: flex;
+    flex-direction: row;
     box-sizing: border-box;
     background-color: #000000;
     width: 100%;
