@@ -25,3 +25,8 @@
     padding: 10px;
 }
 
+#rodape{
+    display: flex;
+    background-color: #121212;
+    color: aliceblue;
+}

@@ -1,3 +1,4 @@
+<?php include("conexao.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,7 +25,17 @@
                 </div>		
 
                 <div>
-                    <textarea placeholder="Gênero" name="txGenero"></textarea>
+                    <select placeholder="Gênero" name="txGenero">
+                    <?php
+            $stmt = $pdo->prepare("select * from genero");	
+            $stmt ->execute();            
+            while($row = $stmt ->fetch(PDO::FETCH_BOTH)){
+        ?>    
+            <option value="<?php echo $row['id_genero'] ?>"> 
+                <?php echo $row['Genero'] ?>
+            </option>           
+        <?php }	?>
+                    </select>
                 </div>
 
                 <div>

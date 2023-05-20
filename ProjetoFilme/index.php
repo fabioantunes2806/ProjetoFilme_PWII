@@ -1,4 +1,5 @@
-<?php include("cabecalho.php")?>
+<?php include("../estruturas/cabecalho.php")?>
+
 
     <section id="destaque">
         <div>
@@ -50,3 +51,5 @@
             <img src="img/jumanji2.jpg" alt="Cartaz Jumanji: Bem-vindo á Selva" class="proporcaoFilme">
         </div>
     </section>
+
+<?php include("../estruturas/rodape.php")?>

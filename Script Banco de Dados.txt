@@ -4,28 +4,53 @@ Use db_projetofilme;
 
 CREATE TABLE IF NOT EXISTS `contato` (
   `id_contato` int(11) NOT NULL AUTO_INCREMENT,
-  `nome_ctt` varchar(250) DEFAULT NULL,
-  `email_ctt` varchar(250) DEFAULT NULL,
-  `assunto_ctt` varchar(250) DEFAULT NULL,
-  `mensagem_ctt` varchar(1000) DEFAULT NULL,
+  `nome_ctt` varchar(250) NOT NULL,
+  `email_ctt` varchar(250) NOT NULL,
+  `assunto_ctt` varchar(250) NOT NULL,
+  `mensagem_ctt` varchar(1000) NOT NULL,
   PRIMARY KEY (`id_contato`)
 );
 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 CREATE TABLE IF NOT EXISTS `genero` (
-  `id_genero` int(11) NOT NULL AUTO_INCREMENT,
-  `Genero` varchar(250) DEFAULT NULL,
+  `id_genero` int NOT NULL AUTO_INCREMENT,
+  `Genero` varchar(250) NOT NULL,
   PRIMARY KEY (`id_genero`)
-)
+);
 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+CREATE TABLE class_ind(
+id_classind int auto_increment primary key not null,
+class_ind varchar(7) NOT NULL
+);
+
+INSERT INTO `class_ind`(`id_classind`, `class_ind`) VALUES (Null,'Livre');
+
+INSERT INTO `class_ind`(`id_classind`, `class_ind`) VALUES (Null,'10 Anos');
+
+INSERT INTO `class_ind`(`id_classind`, `class_ind`) VALUES (Null,'12 Anos');
+
+INSERT INTO `class_ind`(`id_classind`, `class_ind`) VALUES (Null,'14 Anos');
+
+INSERT INTO `class_ind`(`id_classind`, `class_ind`) VALUES (Null,'16 Anos');
+
+INSERT INTO `class_ind`(`id_classind`, `class_ind`) VALUES (Null,'18 Anos');
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 CREATE TABLE IF NOT EXISTS `filmes` (
-  id_filme int(11) NOT NULL AUTO_INCREMENT,
-  Nome_filme varchar(250) DEFAULT NULL,
-  duracao varchar(250) DEFAULT NULL,
-  classificacao_indicativa varchar(250) DEFAULT NULL,
-  id_genero int(11) DEFAULT NULL,
-  PRIMARY KEY (`id_filme`),
+  id_filme int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  Nome_filme varchar(250) NOT NULL,
+  duracao varchar(20) NOT NULL,
+  id_classind varchar(7) NOT NULL,
+  id_genero int NOT NULL,
+  diretor varchar(250) NOT NULL,
+  sinopse varchar(5000) NOT NULL,
+  lancamento varchar(4) NOT NULL,
+  img_main varchar(1000) NOT NULL,
+  img_sec varchar(1000) NOT NULL,  
   FOREIGN KEY (id_genero) REFERENCES genero (id_genero)
     );
 

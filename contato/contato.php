@@ -1,4 +1,4 @@
-<?php include("cabecalho-contato.php")?>
+<?php include("../estruturas/cabecalho.php")?>
 
     <section>
 
@@ -25,3 +25,5 @@
         </form>
         
     </section>
+
+    <?php include("../estruturas/rodape.php")?>
