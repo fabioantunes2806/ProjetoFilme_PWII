@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contato</title>
 
-    <link rel="stylesheet" href="css/reset.css"></link>
+    <link rel="stylesheet" href="../estruturas/css/reset.css"></link>
     <link rel="stylesheet" href="../estruturas/css/style-estrutura.css"></link>
+    <link rel="stylesheet" href="../ProjetoFilme/css/style.css"></link>
 </head>
 <body>
     <header id="cabecalho">

@@ -1,84 +1,47 @@
-body{
-    width: 100%;
-    box-sizing: border-box;
-    background-color: #1a1a1a;
-}
-
-img{
-    color: aliceblue;
-}
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
 
 .titulo{
-    color: aliceblue;
-    font-size: 45px;
-    margin-left: 5%;
-    margin-top: 2%;
-    font-family: monospace;
-    padding-top: 30px;
+    width: 70%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 36px;
+    margin: 3% 7%;
+    color: chartreuse;
 }
 
-strong{
-    color: cyan;
-    font-size: 35px;
-}
-
-#destaque{
-    display: block;
-    box-shadow: inset 0 0 10px whitesmoke;
-    margin-left: 5%;
-    margin-right: 5%;
-}
-
-#infoDestaque{
-    color: aliceblue;
-    font-size: 25px;
-    margin-top: 2%;
-    margin-right: 10%;
-}
-
-#infoDestaque p{
-    margin-left: 37%;
-}
-
-#arrumaShadowBox{
-    padding-bottom: 18%;
-}
-
-#cartazDestaque{
-    float: left;
-    width: 33%;
-    margin: 0 3% 0 9%;
-}
-
-#fantasia{
-    display: block;
-    box-shadow: inset 0 0 10px whitesmoke;
-    margin-left: 5%;
-    margin-right: 5%;
-}
-
-.proporcaoFilme{
-    width: 25%;
-    margin: 2% 0 20px 10px;
-    height: 650px;
-}
-
-.caixaFilme{
+.container{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 80%;
+    margin: 0% 10%;
 }
 
-#terror{
-    display: block;
-    box-shadow: inset 0 0 10px whitesmoke;
-    margin-left: 5%;
-    margin-right: 5%;
+#imgDestaque{
+    width: 140%;
 }
 
-#acaoAventura{
-    display: block;
-    box-shadow: inset 0 0 10px whitesmoke;
-    margin-left: 5%;
-    margin-right: 5%;
+#container_destaque_info{
+    display: flex;
+    flex-direction: column;
+    margin-left: 3%;
+    font-size: 20px;
+}
+
+#container_destaque_info strong{
+    color: chartreuse;
+    font-size: 26px;
+}
+
+.container_destaqueinfo_fim{
+    margin-bottom: 3%;
+    margin-top: 1%;
+}
+
+.container__generosIndex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.imgIndex{
+    width: 28%;
+    /*border: cadetblue solid; (?????)*/
 }
