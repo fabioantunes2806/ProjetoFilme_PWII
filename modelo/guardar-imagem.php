@@ -1,22 +1,4 @@
-<?php  
-    $Nome_filme = $_POST['txNomeFilme'];
-    $duracao = $_POST['txDuracao'];
-    $classificacao_indicativa = $_POST['txClassInd'];
-    $id_genero = $_POST['txGenero'];
-    $diretor = $_POST['txDiretor'];
-    $sinopse = $_POST['txSinopse'];
-    $lancamento = $_POST['txLancamento'];
-    $Img1 = $_POST['txImg1'];
-    $Img2 = $_POST['txImg2'];
-    
-    include("conexao.php");
-
-    $stmt = $pdo->prepare("insert into filmes
-    values(null,'$Nome_filme','$duracao','$classificacao_indicativa','$id_genero','$diretor','$sinopse','$lancamento','$Img1','$Img2')");	    
-	$stmt ->execute();    
-
-    header("location:cadastro-filme.php");   
-    
+<?php
 
     //imagem do marcador
     if(isset($_FILES["arqimage"]["name"])){
@@ -28,7 +10,7 @@
 
         if($erroImgMarc==0){
             if(is_uploaded_file($arqINomeTemp)){
-                if(move_uploaded_file($arqINomeTemp,"../ProjetoFilme/img/". $arqINome)){
+                if(move_uploaded_file($arqINomeTemp,"images/". $arqINome)){
                     $caminhoI = $arqINome;
                 }
                 else{
@@ -50,5 +32,4 @@
         $erro = "Imagem do Marcador enviado não encontrada";
         echo "$erro";
     }
-    
 ?>

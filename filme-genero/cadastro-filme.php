@@ -11,36 +11,27 @@
 
         <section>
 
-            <form action="filme-salvar.php" method="post">      
-                <div>
-                    <input type="text" placeholder="Nome do Filme" name="txNomeFilme" />
-                </div>		
-
-                <div>
-                    <input type="text" placeholder="Duração" name="txDuracao" />
-                </div>		
-
-                <div>
-                    <input type="text" placeholder="Classificação Indicativa" name="txClassInd" />
-                </div>		
-
-                <div>
-                    <select placeholder="Gênero" name="txGenero">
+            <form action="filme-salvar.php"  enctype="multipart/form-data" method="post">      
+                <input type="text" placeholder="Nome do Filme" name="txNomeFilme" />
+                <input type="text" placeholder="Duração" name="txDuracao" />
+                <input type="text" placeholder="Classificação Indicativa" name="txClassInd" />
+                <input type="text" placeholder="Diretor" name="txDiretor" />
+                <input type="text" placeholder="Sinopse" name="txSinopse" />
+                <input type="text" placeholder="Lançamento" name="txLancamento" />
+                <select placeholder="Gênero" name="txGenero">
                     <?php
-            $stmt = $pdo->prepare("select * from genero");	
-            $stmt ->execute();            
-            while($row = $stmt ->fetch(PDO::FETCH_BOTH)){
-        ?>    
-            <option value="<?php echo $row['id_genero'] ?>"> 
-                <?php echo $row['Genero'] ?>
-            </option>           
-        <?php }	?>
-                    </select>
-                </div>
-
-                <div>
-                    <input type="submit" value="Salvar" />
-                </div>
+                        $stmt = $pdo->prepare("select * from genero");	
+                        $stmt ->execute();            
+                        while($row = $stmt ->fetch(PDO::FETCH_BOTH)){
+                    ?>    
+                        <option value="<?php echo $row['id_genero'] ?>"> 
+                            <?php echo $row['Genero'] ?>
+                        </option>           
+                    <?php }	?>
+                </select>
+                
+                <input type="file" name="arqimage" class='Insira um nome aqui' />
+                <input type="submit" value="Salvar" />
             </form>
             
         </section>
