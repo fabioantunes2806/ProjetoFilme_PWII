@@ -1,7 +1,7 @@
 <?php  
     $Nome_filme = $_POST['txNomeFilme'];
     $duracao = $_POST['txDuracao'];
-    $classificacao_indicativa = $_POST['txClassInd'];
+    $id_classind = $_POST['txClassInd'];
     $id_genero = $_POST['txGenero'];
     $diretor = $_POST['txDiretor'];
     $sinopse = $_POST['txSinopse'];
@@ -12,7 +12,7 @@
     include("conexao.php");
 
     $stmt = $pdo->prepare("insert into filmes
-    values(null,'$Nome_filme','$duracao','$classificacao_indicativa','$id_genero','$diretor','$sinopse','$lancamento','$Img1','$Img2')");	    
+    values(null,'$Nome_filme','$duracao','$id_classind','$id_genero','$diretor','$sinopse','$lancamento','$Img1','$Img2')");	    
 	$stmt ->execute();    
 
     header("location:cadastro-filme.php");   

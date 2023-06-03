@@ -12,9 +12,7 @@
 </head>
 <body>
     <header id="cabecalho">
-        <section class="cabecalho__links">
-            <a class="cabecalho__links__link" href="../filme/index-usuario.php">Ínicio</a>
-            <a class="cabecalho__links__link" href="">Filmes</a>
-            <a class="cabecalho__links__link" href="../contato/contato.php">Contato</a>
+        <section class="cabecalho__links-visitante">
+            <a class="cabecalho__links__link-visitante" href="../filme/login.php">Login</a>
         </section>
     </header>

@@ -14,7 +14,17 @@
             <form action="filme-salvar.php"  enctype="multipart/form-data" method="post">      
                 <input type="text" placeholder="Nome do Filme" name="txNomeFilme" />
                 <input type="text" placeholder="Duração" name="txDuracao" />
-                <input type="text" placeholder="Classificação Indicativa" name="txClassInd" />
+                <select placeholder="Classificão Indicativa" name="txClassInd">
+                    <?php
+                        $stmt = $pdo->prepare("select * from class_ind");	
+                        $stmt ->execute();            
+                        while($row = $stmt ->fetch(PDO::FETCH_BOTH)){
+                    ?>    
+                        <option value="<?php echo $row['id_classind'] ?>"> 
+                            <?php echo $row['class_ind'] ?>
+                        </option>           
+                    <?php }	?>
+                </select>
                 <input type="text" placeholder="Diretor" name="txDiretor" />
                 <input type="text" placeholder="Sinopse" name="txSinopse" />
                 <input type="text" placeholder="Lançamento" name="txLancamento" />
@@ -29,7 +39,6 @@
                         </option>           
                     <?php }	?>
                 </select>
-                
                 <input type="file" name="arqimage" class='Insira um nome aqui' />
                 <input type="submit" value="Salvar" />
             </form>

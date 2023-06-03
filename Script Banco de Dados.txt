@@ -54,4 +54,11 @@ CREATE TABLE IF NOT EXISTS `filmes` (
   FOREIGN KEY (id_genero) REFERENCES genero (id_genero)
     );
 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+CREATE TABLE tbUsuario(
+    id_usuario int AUTO_INCREMENT PRIMARY KEY,
+    email varchar(40),
+    senha varchar(255)
+    );
 	

@@ -1,1 +1,0 @@
-<?php iknclude("cabecalho.php")?>

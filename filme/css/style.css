@@ -45,3 +45,18 @@
     width: 28%;
     /*border: cadetblue solid; (?????)*/
 }
+
+#login{
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 380px;
+    height: 500px;
+    background: #343434;
+    border-radius: 8px;
+}
+
+#login__form{
+    display: flex;
+    flex-direction: column;
+}
