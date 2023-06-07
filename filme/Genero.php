@@ -1,13 +1,8 @@
 <?php include("cabecalho.php") ?>
 
-<form action="formGenero" method="post">
-    <div>
+    <form action="formGenero" method="post">
         <input type="text" placeholder="Gênero" name="txtGenero" />
-    </div>		
-
-    <div>
         <input type="submit" value="Salvar" />
-    </div>
-</form>
+    </form>
 
 <h1>Gêneros</h1>

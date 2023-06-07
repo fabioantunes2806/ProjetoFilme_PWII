@@ -1,11 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
 
-/*body é temporário.. só pra ajustar aos olhos pq tema claro n da n parceiro*/
-body{
-    background-color: #867c7c;
-    color: aliceblue;
-}
-
 #cabecalho {
     display: flex;
     background-color: #121212;
@@ -21,11 +15,11 @@ body{
     font-family: 'Krona One', sans-serif;
     font-size: 24px;
     color: black;
-    background-color: #ba9ffb;
+    background-color: #ffeba7;
     border-radius: 30px;
     border-style: solid;
-    border-width: 3px;
-    border-color: #382bf0;
+    border-width: 4px;
+    border-color: #102770;
     text-decoration: none;
     margin: 5%;
     padding: 10px;
@@ -41,11 +35,11 @@ body{
     font-family: 'Krona One', sans-serif;
     font-size: 24px;
     color: black;
-    background-color: #ba9ffb;
+    background-color: #ffeba7;
     border-radius: 30px;
     border-style: solid;
     border-width: 3px;
-    border-color: #382bf0;
+    border-color: #102770;
     text-decoration: none;
     margin: 5%;
     padding: 10px;

@@ -1,29 +1,30 @@
 <?php include("../estruturas/cabecalho.php")?>
 
-    <section>
-
-        <form action="contato-salvar.php" method="post">      
-            <div>
-                <input type="text" placeholder="Nome" name="txNome" />
-            </div>		
-
-            <div>
-                <input type="text" placeholder="E-mail" name="txEmail" />
-            </div>		
-
-            <div>
-                <input type="text" placeholder="Assunto" name="txAssunto" />
-            </div>		
-
-            <div>
-                <textarea placeholder="Mensagem" name="txMensagem"></textarea>
+    <div class="section">
+        <div class="container">
+            <div class="col-12 text-center align-self-center py-5">
+                <div class="card-wrap-contato">
+                    <div class="card-wrapper-contato">
+                        <div class="card-contato">
+                            <div class="center-wrap">
+                                <form action="contato-salvar.php" method="post" class="form-group">
+                                    <input type="text" name="txNome" class="form-style" placeholder="Seu nome" autocomplete="off">
+                                    <i class="input-icon uil uil-user"></i>
+                                    <input type="text" name="txEmail" placeholder="Seu email" autocomplete="off">
+                                    <i class="input-icon uil uil-user"></i>
+                                    <input type="text" name="txAssunto" placeholder="Assunto">
+                                    <i class="input-icon uil uil-user"></i>
+                                    <textarea placeholder="Mensagem" name="txMensagem"></textarea>
+                                    <i class="input-icon uil uil-user"></i>
+                                    <input type="submit" class="btnSubmit" value="Salvar">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </div>
+    </div>
 
-            <div>
-                <input type="submit" value="Salvar" />
-            </div>
-        </form>
-        
-    </section>
 
     <?php include("../estruturas/rodape.php")?>
