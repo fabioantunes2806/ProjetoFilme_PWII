@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="../estruturas/css/reset.css"></link>
     <link rel="stylesheet" href="../estruturas/css/style-estrutura.css"></link>
     <link rel="stylesheet" href="../filme/css/style.css"></link>
+    <script src="https://kit.fontawesome.com/f423d52d1f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">    
 </head>
 <body>
     <header id="cabecalho">
