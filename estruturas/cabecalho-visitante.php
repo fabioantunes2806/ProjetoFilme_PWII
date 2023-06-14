@@ -13,6 +13,6 @@
 <body>
     <header id="cabecalho">
         <section class="cabecalho__links-visitante">
-            <a class="cabecalho__links__link-visitante" href="../filme/login.php">Login</a>
+            <a class="cabecalho__links__link" href="../filme/login.php">Login</a>
         </section>
     </header>

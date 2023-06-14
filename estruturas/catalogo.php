@@ -1,3 +1,5 @@
+<div class="body-catalogo">    
+    <div class="background">
     <h1 class="titulo">Destaque</h1>
         <section class="container">    
             <img id="imgDestaque" src="../estruturas/img/opred.jpg" alt="Capa One Piece Film: RED">
@@ -23,7 +25,7 @@
                 <img class="imgIndex" src="../estruturas/img/malevola.jpg" alt="Cartaz Malévola - Dona do Mal" class="proporcaoFilme">
             </div>
         </section>
-    
+
         <h1 class="titulo">Terror</h1>
         <section class="container">    
             <div class="container__generosIndex">
@@ -32,7 +34,7 @@
                 <img class="imgIndex" src="../estruturas/img/oExorcista.jpg" alt="Cartaz O Exorcista" class="proporcaoFilme">
             </div>
         </section>
-    
+
         <h1 class="titulo">Ação e Aventura</h1>
         <section class="container">   
             <div class="container__generosIndex">
@@ -41,3 +43,5 @@
                 <img class="imgIndex" src="../estruturas/img/jumanji2.jpg" alt="Cartaz Jumanji: Bem-vindo á Selva" class="proporcaoFilme">
             </div>
         </section>
+    </div>
+</div>
