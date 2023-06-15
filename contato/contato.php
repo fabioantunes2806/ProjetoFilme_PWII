@@ -1,26 +1,37 @@
 <?php include("../estruturas/cabecalho.php")?>
 
+    <title>Contato</title>
+
     <div class="section">
-        <div class="container">
-            <div class="col-12 text-center align-self-center py-5">
-                <div class="card-wrap-contato">
-                    <div class="card-wrapper-contato">
-                        <div class="card-contato">
-                            <div class="center-wrap">
-                                <form action="contato-salvar.php" method="post" class="form-group">
-                                    <input type="text" name="txNome" class="form-style" placeholder="Seu nome" autocomplete="off">
-                                    <i class="input-icon uil uil-user"></i>
-                                    <input type="text" name="txEmail" placeholder="Seu email" autocomplete="off">
-                                    <i class="input-icon uil uil-user"></i>
-                                    <input type="text" name="txAssunto" placeholder="Assunto">
-                                    <i class="input-icon uil uil-user"></i>
-                                    <textarea placeholder="Mensagem" name="txMensagem"></textarea>
-                                    <i class="input-icon uil uil-user"></i>
-                                    <input type="submit" class="btnSubmit" value="Salvar">
-                                </form>
+		<div class="container">
+			<div class="full-height">
+				<div class="center-box">
+					<div class="card-3d-wrap">
+						<div class="card-3d-wrapper">
+							<div class="card-genero">
+								<div class="center-wrap">
+									<div class="text-center">
+                                        <h4>Contato</h4>
+                                        <form action="../filme/fazer-login.php" methos="post">
+                                            <div class="form-group">
+                                                <input type="text" name="txNome" class="form-style" placeholder="Seu nome" autocomplete="off">
+                                            </div>	
+                                            <div class="form-group mt-2">
+                                                <input type="text" name="txEmail" class="form-style" placeholder="Seu email" autocomplete="off">
+                                            </div>
+                                            <div class="form-group mt-2">
+                                                <input type="text" name="txAssunto" class="form-style" placeholder="Assunto">
+                                            </div>
+                                            <div class="form-group mt-2">
+                                                <textarea name="txMensagem" class="form-style" placeholder="Mensagem"></textarea>
+                                            </div>
+                                            <input type="submit" class="btn" value="Enviar">
+                                        </form>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </div>                    
                 </div>
             </div>
         </div>

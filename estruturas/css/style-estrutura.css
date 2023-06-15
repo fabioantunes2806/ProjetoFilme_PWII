@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
 
 #cabecalho {
     display: flex;
@@ -32,6 +33,60 @@
 .cabecalho__links__link:hover{
     color: #102770;
 }
+
+
+.background{
+    background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat.svg');
+    background-size: 120%;
+  }
+  
+  .titulo{
+    width: 70%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 36px;
+    margin: 3% 7%;
+    color: #ffeba7;
+}
+.background{
+  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat.svg');
+}
+.container{
+    display: flex;
+    width: 80%;
+    margin: 0% 10%;
+}
+
+#imgDestaque{
+    width: 140%;
+}
+
+#container_destaque_info{
+    display: flex;
+    flex-direction: column;
+    margin-left: 3%;
+    font-size: 20px;
+}
+
+#container_destaque_info strong{
+    color: #ffeba7;
+    font-size: 26px;
+}
+
+.container_destaqueinfo_fim{
+    margin-bottom: 3%;
+    margin-top: 1%;
+}
+
+.container__generosIndex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.imgIndex{
+    width: 28%;
+}
+  
 
 #rodape{
     display: flex;
