@@ -4,7 +4,6 @@
 body{
 	font-family: 'Poppins', sans-serif;
 	font-weight: 300;
-	font-size: 15px;
 	line-height: 1.7;
 	color: #c4c3ca;
 	background-color: #2a2b38;
@@ -25,9 +24,10 @@ p {
   line-height: 1.7;
 }
 h4 {
+  width: 85%;
+  margin: 60px 0;
   font-weight: 600;
   text-align: center;
-  margin-right: 90px;
   text-transform: uppercase;
   color: #ffeba7;
 }
@@ -43,6 +43,7 @@ h6 span{
   position: relative;
   width: 100%;
   display: block;
+  font-size: 15px;
 }
 .full-height{
   min-height: 100vh;
@@ -52,7 +53,7 @@ h6 span{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0 30vh;
+    margin: 0 25vh;
 }
 [type="checkbox"]:checked,
 [type="checkbox"]:not(:checked){
@@ -99,7 +100,7 @@ h6 span{
   position: relative;
   width: 440px;
   max-width: 100%;
-  height: 400px;
+  height: 470px;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
   perspective: 800px;
@@ -311,11 +312,5 @@ h6 span{
   position: absolute;
   border-radius: 6px;
   left: 0;
-  top: 0;
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  -o-backface-visibility: hidden;
-  backface-visibility: hidden;
+  top: 0; 
 }

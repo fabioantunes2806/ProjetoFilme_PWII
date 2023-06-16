@@ -12,18 +12,18 @@
 								<div class="center-wrap">
 									<div class="text-center">
                                         <h4>Contato</h4>
-                                        <form action="../filme/fazer-login.php" methos="post">
+                                        <form action="../contato/contato-salvar.php" method="post">
                                             <div class="form-group">
                                                 <input type="text" name="txNome" class="form-style" placeholder="Seu nome" autocomplete="off">
                                             </div>	
-                                            <div class="form-group mt-2">
+                                            <div class="form-group">
                                                 <input type="text" name="txEmail" class="form-style" placeholder="Seu email" autocomplete="off">
                                             </div>
-                                            <div class="form-group mt-2">
-                                                <input type="text" name="txAssunto" class="form-style" placeholder="Assunto">
+                                            <div class="form-group">
+                                                <input type="text" name="txAssunto" class="form-style" placeholder="Assunto" autocomplete="off">
                                             </div>
                                             <div class="form-group mt-2">
-                                                <textarea name="txMensagem" class="form-style" placeholder="Mensagem"></textarea>
+                                                <textarea name="txMensagem" class="form-style" placeholder="Mensagem" autocomplete="off"></textarea>
                                             </div>
                                             <input type="submit" class="btn" value="Enviar">
                                         </form>
@@ -31,7 +31,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>                    
+                    </div>
                 </div>
             </div>
         </div>
