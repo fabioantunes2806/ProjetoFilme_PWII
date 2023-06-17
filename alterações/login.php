@@ -1,5 +1,6 @@
-<?php include("../estruturas/cabecalho-visitante.php")
-/*include("conexao.php");
+<?php include("../estruturas/cabecalho-visitante.php"); 
+
+	/*include("conexao.php");
 
 	if(isset($_POST['txEmail']) || isset($_POST['txSenha'])) {
 
@@ -70,9 +71,9 @@
 								<div class="center-wrap">
 									<div class="section text-center">
 										<h4>Sign Up</h4>
-										<form action="../filme/fazer-login.php" method="post">
+										<form action="" method="post">
 											<div class="form-group">
-												<input type="text" name="regName" class="form-style" placeholder="Seu Username" id="regName" autocomplete="off">
+												<input type="text" name="regName" class="form-style" placeholder="Seu Nome Completo" id="regName" autocomplete="off">
 												<i class="input-icon uil uil-user"></i>
 											</div>	
 											<div class="form-group mt-2">

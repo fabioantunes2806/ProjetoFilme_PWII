@@ -25,7 +25,7 @@ p {
 }
 h4 {
   width: 85%;
-  margin: 60px 0;
+  margin-bottom: 60px;
   font-weight: 600;
   text-align: center;
   text-transform: uppercase;
@@ -296,18 +296,31 @@ h6 span{
 	display: block;
 }
 
-
-
-
 /*Contato*/
 .card-genero{
   box-sizing: border-box;
   width: 110%;
-  height: 150%;
+  height: 120%;
   background-color: #2a2b38;
   background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat.svg');
   background-position: bottom center;
   background-repeat: no-repeat;
+  background-size: 300%;
+  position: absolute;
+  border-radius: 6px;
+  left: 0;
+  top: 0; 
+}
+
+/*Filme*/
+.card-filme{
+  box-sizing: border-box;
+  width: 110%;
+  height: 180%;
+  background-color: #2a2b38;
+  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat.svg');
+  background-position: bottom center;
+  background-repeat: initial;
   background-size: 300%;
   position: absolute;
   border-radius: 6px;

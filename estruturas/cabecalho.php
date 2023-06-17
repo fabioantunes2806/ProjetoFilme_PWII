@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../filme/css/style-contato.css"></link>  
     <link rel="stylesheet" href="../filme/css/style.css"></link>    
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"> 
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header id="cabecalho">
@@ -17,5 +18,10 @@
             <a class="cabecalho__links__link" href="../filme/index-usuario.php">Ínicio</a>
             <a class="cabecalho__links__link" href="">Filmes</a>
             <a class="cabecalho__links__link" href="../contato/contato.php">Contato</a>
+        </section>
+        <section>            
+            <a class="logoutIcon" href="../filme/index-visitante.php">
+                <i class="input-icon-logout uil uil-signout"></i>
+            </a>            
         </section>
     </header>

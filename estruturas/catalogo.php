@@ -17,6 +17,26 @@
             <p class="container_destaque__info">Ação</p>
         </div>
     </div>
+    
+    <button class="handle left-handle">
+        <div class="text">&#8249;</div>
+    </button>
+    <div class="conteiner-carousel">
+        <div class="slider">
+            <img class="filme" src="../estruturas/img/chihiro.jpg" alt="Cartaz A Viagem de Chihiro" class="proporcaoFilme">
+            <img class="filme" src="../estruturas/img/yugioh.jpg" alt="Cartaz Yu-gi-oh - O Lado Negro das Dimensões" class="proporcaoFilme">
+            <img class="filme" src="../estruturas/img/malevola.jpg" alt="Cartaz Malévola - Dona do Mal" class="proporcaoFilme">
+            <img class="filme" src="../estruturas/img/invocacaoDoMal1.jpg" alt="Cartaz Primeiro Invocação do Mal" class="proporcaoFilme">
+            <img class="filme" src="../estruturas/img/aCasadoTerror.jpg" alt="Cartaz A Casa do Terror" class="proporcaoFilme">
+            <img class="filme" src="../estruturas/img/oExorcista.jpg" alt="Cartaz O Exorcista" class="proporcaoFilme">
+            <img class="filme" src="../estruturas/img/doutorEstranho2.jpeg" alt="Cartaz Doutor Estranho no Multiverso da Loucura" class="proporcaoFilme">
+            <img class="filme" src="../estruturas/img/velozeseFuriosos7.jpg"  alt="Cartaz Velozes e Furiosos 7" class="proporcaoFilme">
+            <img class="filme" src="../estruturas/img/jumanji2.jpg" alt="Cartaz Jumanji: Bem-vindo á Selva" class="proporcaoFilme">
+        </div>
+        <button class="handle right-handle">
+            <div class="text">&#8250;</div>
+        </button>
+    </div>
 
     <h1 class="titulo">Fantasia</h1>
     <section class="container">    

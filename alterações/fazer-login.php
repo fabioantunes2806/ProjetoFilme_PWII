@@ -1,5 +1,5 @@
 <?php
-
+/*
     $user = $_POST['txEmail'];
     $pass = $_POST['txSenha'];
 
@@ -17,9 +17,9 @@
     }else{
         echo "Usuário logado";
     }
-
+*/
 //echo $row[1] . " ";
-
+  
 include("conexao.php");
 
 	if(isset($_POST['txEmail']) || isset($_POST['txSenha'])) {
@@ -56,6 +56,8 @@ include("conexao.php");
 		}
 	}		
 }
+
+
 
 ?>
     
