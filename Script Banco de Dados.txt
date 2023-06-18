@@ -19,6 +19,12 @@ CREATE TABLE IF NOT EXISTS `genero` (
   PRIMARY KEY (`id_genero`)
 );
 
+INSERT INTO `genero`(`id_genero`, `Genero`) VALUES (null,'Fantasia');
+
+INSERT INTO `genero`(`id_genero`, `Genero`) VALUES (null,'Terror');
+
+INSERT INTO `genero`(`id_genero`, `Genero`) VALUES (null,'Aventura');
+
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 CREATE TABLE class_ind(
@@ -58,6 +64,7 @@ CREATE TABLE IF NOT EXISTS `filmes` (
 
 CREATE TABLE tbUsuario(
     id_usuario int AUTO_INCREMENT PRIMARY KEY,
+    username varchar(20),
     email varchar(40),
     senha varchar(255)
     );
