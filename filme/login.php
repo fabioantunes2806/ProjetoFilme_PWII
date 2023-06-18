@@ -47,6 +47,24 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+
+	<script>
+		function confereSenha() {
+			const regPass = document.querySelector('input[name=regPass]');
+			const regConfirm = document.querySelector('input[name=regConfirm]');
+
+			if(regConfirm.value === regPass.value) {
+				regConfirm.setCustomValidity('');
+			} else {
+				regConfirm.setCustomValidity('As senhas não conferem');
+			}
+		}
+
+		function sucesso() {
+			alert("Usuário cadastrado com sucesso! :)")
+		}
+
+		</script>
 </head>
 <body>
 <div class="section">
@@ -81,17 +99,21 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
 								<div class="center-wrap">
 									<div class="section text-center">
 										<h4>Sign Up</h4>
-										<form action="" method="post">
+										<form action="salvar-usuario.php" onsubmit="sucesso()" method="post">
 											<div class="form-group">
-												<input type="text" name="regName" class="form-style" placeholder="Seu Username" id="regName" autocomplete="off">
+												<input type="text" name="regName" required class="form-style" placeholder="Seu Username" id="regName" autocomplete="off">
 												<i class="input-icon uil uil-user"></i>
 											</div>	
 											<div class="form-group mt-2">
-												<input type="email" name="regEmail" class="form-style" placeholder="Seu Email" id="logemail" autocomplete="off">
+												<input type="email" name="regEmail" required class="form-style" placeholder="Seu Email" id="logemail" autocomplete="off">
 												<i class="input-icon uil uil-at"></i>
 											</div>	
 											<div class="form-group mt-2">
-												<input type="password" name="regPass" class="form-style" placeholder="Sua Senha" id="logpass" autocomplete="off">
+												<input type="password" name="regPass" required onchange='confereSenha();' class="form-style" placeholder="Sua Senha" id="logpass" autocomplete="off">
+												<i class="input-icon uil uil-lock-alt"></i>
+											</div>
+											<div class="form-group mt-2">
+												<input type="password" name="regConfirm" required onchange='confereSenha();' class="form-style" placeholder="Confirmar Senha" id="logpass" autocomplete="off">
 												<i class="input-icon uil uil-lock-alt"></i>
 											</div>
 												<input type="submit" class="btn" value="Registrar">
