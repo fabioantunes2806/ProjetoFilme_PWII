@@ -1,5 +1,5 @@
 <?php
-
+/*
     $user = $_POST['txEmail'];
     $pass = $_POST['txSenha'];
 
@@ -18,7 +18,7 @@
         echo "Usuário logado";
     }
 
-//echo $row[1] . " ";
+//echo $row[1] . " "; */
 
 include("conexao.php");
 

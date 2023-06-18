@@ -1,44 +1,55 @@
-<?php include("../estruturas/cabecalho-visitante.php")
-/*include("conexao.php");
+<?php include("../estruturas/cabecalho-visitante.php");
+    
+    include('conexao.php');
 
-	if(isset($_POST['txEmail']) || isset($_POST['txSenha'])) {
+if(isset($_POST['email']) || isset($_POST['senha'])) {
 
-	if(isset($_POST['txEmail']) == 0) {
-		echo "Preencha seu e-mail";
-	}else if(strlen($_POST['txSenha']) == 0) {
-		echo "Preencha sua senha";
-	}else{
+    if(strlen($_POST['email']) == 0) {
+        echo "Preencha seu e-mail";
+    } else if(strlen($_POST['senha']) == 0) {
+        echo "Preencha sua senha";
+    } else {
 
-		$email = $mysqli ->real_scape_string($_POST['txEmail']);
-		$senha = $mysqli ->real_scape_string($_POST['txSenha']);
+        $email = $mysqli->real_escape_string($_POST['email']);
+        $senha = $mysqli->real_escape_string($_POST['senha']);
+    
+        $sql_code = "SELECT * FROM tbusuario WHERE email = '$email' AND senha = '$senha'";
+        $sql_query = $mysqli->query($sql_code) or die("Falha na execução do código SQL: " . $mysqli->error);
 
-		$sql_code = "SELECT * FROM tbusuario WHERE email = '$email' AND senha = '$senha'";
-		$sql_query = $mysqli->query($sql_code) or die("Falha na execução do código SQL: " . $mysqli->error);
+        $quantidade = $sql_query->num_rows;
 
-		$quantidade = $sql_query->num_rows;
-		
-		if($quantidade == 1) {
+        if($quantidade == 1) {
 
-			$usuario = $sql_query->fetch_assoc();
+            $usuario = $sql_query->fetch_assoc();
 
-			if(!isset($_SESSION)) {
-				session_start();
-			}
+            if(!isset($_SESSION)) {
+                session_start();
+            }
 
-			$_SESSION['user'] = $usuario['id'];
-			$_SESSION['nome'] = $usuario['username'];
+            $_SESSION['id_usuario'] = $usuario['id_usuario'];
+            $_SESSION['username'] = $usuario['username'];
 
-			header("Location: index-usuario.php");
-			
-		} else {
-		echo "Falha ao logar! E-mail ou senha incorretos";
-		}
-	}		
-} */
+            header("Location: index-usuario.php");
 
+        } else {
+            echo "Falha ao logar! E-mail ou senha incorretos.";
+        }
+
+    }
+
+}
 ?>
 
-	<div class="section">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+<div class="section">
 		<div class="container">
 			<div class="full-height">
 				<div class="center-box">
@@ -51,13 +62,13 @@
 								<div class="center-wrap">
 									<div class="section text-center">
 										<h4>Log In</h4>
-										<form action="../filme/fazer-login.php" methos="post">
+										<form action="" method="post">
 											<div class="form-group">
-												<input type="email" name="txEmail" class="form-style" placeholder="Seu Email" id="logEmail" autocomplete="off">
+												<input type="email" name="email" class="form-style" placeholder="Seu Email" id="logEmail" autocomplete="off">
 												<i class="input-icon uil uil-at"></i>
 											</div>	
 											<div class="form-group mt-2">
-												<input type="password" name="txSenha" class="form-style" placeholder="Sua Senha" id="logPass" autocomplete="off">
+												<input type="password" name="senha" class="form-style" placeholder="Sua Senha" id="logPass" autocomplete="off">
 												<i class="input-icon uil uil-lock-alt"></i>
 											</div>
 											<input type="submit" class="btn" value="Log In">
@@ -70,7 +81,7 @@
 								<div class="center-wrap">
 									<div class="section text-center">
 										<h4>Sign Up</h4>
-										<form action="../filme/fazer-login.php" method="post">
+										<form action="" method="post">
 											<div class="form-group">
 												<input type="text" name="regName" class="form-style" placeholder="Seu Username" id="regName" autocomplete="off">
 												<i class="input-icon uil uil-user"></i>
@@ -96,3 +107,5 @@
 	</div>
 
 <?php include("../estruturas/rodape.php")?>
+</body>
+</html>

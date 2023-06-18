@@ -20,7 +20,7 @@
             <a class="cabecalho__links__link" href="../contato/contato.php">Contato</a>
         </section>
         <section>            
-            <a class="logoutIcon" href="../filme/index-visitante.php">
+            <a class="logoutIcon" href="../filme/logout.php">
                 <i class="input-icon-logout uil uil-signout"></i>
             </a>            
         </section>
