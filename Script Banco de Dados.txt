@@ -60,6 +60,15 @@ CREATE TABLE IF NOT EXISTS `filmes` (
   FOREIGN KEY (id_genero) REFERENCES genero (id_genero)
     );
 
+INSERT INTO `filmes`(`id_filme`, `Nome_filme`, `duracao`, `id_classind`, `id_genero`, `diretor`, `sinopse`, `lancamento`, `img_main`, `img_sec`) VALUES (null,'A Viagem de Chihiro','2h 5m','1','1','Hayao Miyazaki','Chihiro e seus pais estão se mudando para uma cidade diferente. A caminho da nova casa, o pai decide pegar um atalho. Eles se deparam com uma mesa repleta de comida, embora ninguém esteja por perto. Chihiro sente o perigo, mas seus pais começam a comer. Quando anoitece, eles se transformam em porcos. Agora, apenas Chihiro pode salvá-los.','2001','../estruturas/img/chihiro.jpg','../estruturas/img/a viagem de chihiro.png');
+
+INSERT INTO `filmes`(`id_filme`, `Nome_filme`, `duracao`, `id_classind`, `id_genero`, `diretor`, `sinopse`, `lancamento`, `img_main`, `img_sec`) VALUES (null,'One Piece Film: Red','1h 55m','3','3','Gorō Taniguch','Em One Piece Film RED todos conhecerão Uta, a cantora mais amada do planeta, cuja voz foi descrita como “de outro mundo”. Ela é conhecida por esconder sua própria identidade ao se apresentar. Agora, pela primeira vez, Uta se revelará ao mundo em um show ao vivo. Com a Marinha assistindo de perto, o local se enche de fãs de Uta - incluindo piratas animados e os Chapéus de Palha liderados por Luffy, que vieram para curtir sua performance - todos aguardam ansiosamente a voz que o mundo inteiro estava esperando.','2022','../estruturas/img/opred.jpg','../estruturas/img/oprbanner.jpg');
+
+INSERT INTO `filmes`(`id_filme`, `Nome_filme`, `duracao`, `id_classind`, `id_genero`, `diretor`, `sinopse`, `lancamento`, `img_main`, `img_sec`) VALUES (null,'Yu-Gi-Oh! O Lado Negro das Dimensões','2h 11m','3','1','Satoshi Kuwabara','No passado, Yami Yugi e Seto Kaiba se enfrentaram em inúmeras ocasiões. Yami Yugi, que habita dentro do corpo de Yugi Muto, e Kaiba vão duelar novamente, e esta será uma batalha em que os dois terão seu orgulho e experiência colocados à prova.','2016','../estruturas/img/yugioh.jpg','../estruturas/img/dsod_banner.jpg');
+
+INSERT INTO `filmes`(`id_filme`, `Nome_filme`, `duracao`, `id_classind`, `id_genero`, `diretor`, `sinopse`, `lancamento`, `img_main`, `img_sec`) VALUES (null,'Malévola: Dona do Mal','1h 51m','2','1','Joachim Rønning','Malévola e sua afilhada Aurora começam a questionar os complexos laços familiares que as prendem à medida que são puxadas em direções diferentes por casamentos, aliados inesperados e novas forças sombrias em jogo.','2019','../estruturas/img/malevola.jpg','../estruturas/img/Malevolabanner.retang.jpg');
+
+
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 CREATE TABLE tbUsuario(

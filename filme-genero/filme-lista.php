@@ -1,4 +1,6 @@
-<?php include("conexao.php"); ?>
+<?php include("conexao.php"); 
+
+include("../estruturas/cabecalho.php")?>
 
 <!DOCTYPE html>
 <html lang="en">
