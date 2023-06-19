@@ -25,6 +25,7 @@ INSERT INTO `genero`(`id_genero`, `Genero`) VALUES (null,'Terror');
 
 INSERT INTO `genero`(`id_genero`, `Genero`) VALUES (null,'Aventura');
 
+INSERT INTO `genero`(`id_genero`, `Genero`) VALUES (null,'Ação');
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 CREATE TABLE class_ind(
