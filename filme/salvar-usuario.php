@@ -2,24 +2,34 @@
 
     $nome = $_POST['regName'];
     $emailuser = $_POST['regEmail'];
-    $senhauser = $_POST['regPass'];
+    $senhauser = sha1($_POST['regPass']);
     
 
     include("conexao.php");
 
-  /*  $consulta = $pdo->prepare("SELECT * FROM 'tbusuario' WHERE 'email' =?");
+    $consulta = $pdo->prepare("SELECT * FROM tbusuario WHERE email = '$emailuser'");
     $consulta->execute();
 
     if ($consulta->rowCount() == 1) {
         echo "e-mail já cadastrado";
     }else{
-        
-    }  */
-
-    $stmt = $pdo->prepare("insert into tbusuario
+        $stmt = $pdo->prepare("insert into tbusuario
         values(null,'$nome','$emailuser','$senhauser')");	    
-        $stmt ->execute();  
+        $stmt ->execute(); 
+    }  
 
+   /* $sql_code1 = "SELECT * FROM tbusuario WHERE email = '$emailuser'";
+        $sql_query1 = $mysqli->query($sql_code1) or die("Falha na execução do código SQL: " . $mysqli->error);
+
+        $quantidade1 = $sql_query1->num_rows;
+
+        if($quantidade1 == 1) {
+            echo("Email já cadastrado");
+        }else{
+            $stmt = $pdo->prepare("insert into tbusuario
+                values(null,'$nome','$emailuser','$senhauser')");	    
+            $stmt ->execute();  
+        }*/
     header("location:login.php");
     
 ?>
