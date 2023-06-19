@@ -43,20 +43,14 @@
                 $stmt = $pdo->prepare("SELECT * FROM `filmes` WHERE id_filme = 1 or id_filme = 3;");	
                 $stmt ->execute();
                 
-                ($row = $stmt ->fetch(PDO::FETCH_BOTH))  ?>
+                while($row = $stmt ->fetch(PDO::FETCH_BOTH)) { ?>
     <div class="conteiner-carousel">
         <div class="slider">
+            <a href="../estruturas/filme-individual.php?idfilme=<?php echo $row[0] ?>">
             <img class="filme" src="<?php echo $row[8] ?>" alt="Cartaz A Viagem de Chihiro" class="proporcaoFilme">
-            <img class="filme" src="../estruturas/img/yugioh.jpg" alt="Cartaz Yu-gi-oh - O Lado Negro das Dimensões" class="proporcaoFilme">
-            <img class="filme" src="../estruturas/img/malevola.jpg" alt="Cartaz Malévola - Dona do Mal" class="proporcaoFilme">
-            <img class="filme" src="../estruturas/img/invocacaoDoMal1.jpg" alt="Cartaz Primeiro Invocação do Mal" class="proporcaoFilme">
-            <img class="filme" src="../estruturas/img/aCasadoTerror.jpg" alt="Cartaz A Casa do Terror" class="proporcaoFilme">
-            <img class="filme" src="../estruturas/img/oExorcista.jpg" alt="Cartaz O Exorcista" class="proporcaoFilme">
-            <img class="filme" src="../estruturas/img/doutorEstranho2.jpeg" alt="Cartaz Doutor Estranho no Multiverso da Loucura" class="proporcaoFilme">
-            <img class="filme" src="../estruturas/img/velozeseFuriosos7.jpg"  alt="Cartaz Velozes e Furiosos 7" class="proporcaoFilme">
-            <img class="filme" src="../estruturas/img/jumanji2.jpg" alt="Cartaz Jumanji: Bem-vindo á Selva" class="proporcaoFilme">
+            </a>
         </div>
-        
+                <?php } ?>
         <button class="handle right-handle">
             <div class="text">&#8250;</div>
         </button>

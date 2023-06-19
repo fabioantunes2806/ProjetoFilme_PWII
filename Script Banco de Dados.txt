@@ -77,4 +77,6 @@ CREATE TABLE tbUsuario(
     email varchar(40),
     senha varchar(255)
     );
+
+INSERT INTO `tbusuario`(`id_usuario`, `username`, `email`, `senha`) VALUES (null,'teste','teste@teste.com','2e6f9b0d5885b6010f9167787445617f553a735f');
 	
