@@ -12,6 +12,24 @@
 </head>
 <body>
 
+<!-- Pesquisa -->
+<section>
+  <div>
+  <h2>Pesquisar gênero</h2>
+  </div>
+
+  <form method="post">
+    <div>
+      <input type="text" placeholder="Gênero" name="txPesquisar" required />
+    </div>  
+
+    <div>
+      <button> Pesquisar </button>
+    </div>  
+
+    </form>
+  </section>
+
     <section>
         <table class="table table-striped">
             <thead>
@@ -22,9 +40,18 @@
             </tr>
             </thead>
             <tbody>
+           
+           
             <?php
-                $stmt = $pdo->prepare("select * from genero");	
-                $stmt ->execute();
+
+          if(isset($_POST['txPesquisar'])){
+            $nome = $_POST['txPesquisar'];
+            $stmt = $pdo -> prepare("SELECT * FROM genero where Genero = '$nome'");
+          }else{
+            $stmt = $pdo->prepare("select * from genero");	
+          }
+
+          $stmt ->execute();
                 
                 while($row = $stmt ->fetch(PDO::FETCH_BOTH)){
                   echo "<tr class='celula'>";
