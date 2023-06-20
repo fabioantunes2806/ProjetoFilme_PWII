@@ -14,6 +14,25 @@ include("../estruturas/cabecalho.php")?>
 </head>
 <body>
 
+<!-- Pesquisa -->
+<section>
+  <div>
+  <h2>Pesquisar filme</h2>
+  </div>
+
+  <form method="post">
+    <div>
+      <input type="text" placeholder="Nome do filme" name="txPesquisar" required />
+    </div>  
+
+    <div>
+      <button> Pesquisar </button>
+    </div>  
+
+    </form>
+  </section>
+
+
     <section>
         <table class="table table-striped">
             <thead>
@@ -33,7 +52,15 @@ include("../estruturas/cabecalho.php")?>
             </thead>
             <tbody>
             <?php
+
+              if(isset($_POST['txPesquisar'])){
+                $nome = $_POST['txPesquisar'];
+                $stmt = $pdo -> prepare("SELECT * FROM filmes where Nome_filme = '$nome'");
+              }else{
                 $stmt = $pdo->prepare("select * from filmes");	
+              }
+
+                
                 $stmt ->execute();
                 
                 while($row = $stmt ->fetch(PDO::FETCH_BOTH)){

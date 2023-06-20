@@ -8,7 +8,7 @@
 </head>
 <body>
     
-<title>Filmes</title>
+<title>Index</title>
 
 <section>
 <?php
@@ -36,67 +36,66 @@
     </div>
 </section>
 
-    <button class="handle left-handle">
-        <div class="text">&#8249;</div>
-    </button>
-    <?php
-                $stmt = $pdo->prepare("SELECT * FROM `filmes` WHERE id_filme = 1 or id_filme = 3 or id_filme = 4 or id_filme = 5 or id_filme = 6 or id_filme = 7
-                or id_filme = 8 or id_filme = 9 or id_filme = 10;");	
-                $stmt ->execute();
-                
-                while($row = $stmt ->fetch(PDO::FETCH_BOTH)) { ?>
-    <div class="conteiner-carousel">
-        <div class="slider">
-            <a href="../estruturas/filme-individual.php?idfilme=<?php echo $row[0] ?>">
-            <img class="filme" src="<?php echo $row[8] ?>" alt="Cartaz A Viagem de Chihiro" class="proporcaoFilme">
-            </a>
-        </div>
-                <?php } ?>
-        <button class="handle right-handle">
-            <div class="text">&#8250;</div>
-        </button>
-    </div>
-
 
     <h1 class="titulo">Fantasia</h1>
     <?php
-                $stmt = $pdo->prepare("SELECT * FROM `filmes` WHERE id_filme = 1 or id_filme = 3 or id_filme = 4;");	
+                $stmt = $pdo->prepare("SELECT * FROM `filmes` WHERE id_filme = 3");	
                 $stmt ->execute();
                 
-                while($row = $stmt ->fetch(PDO::FETCH_BOTH)) { ?>
+                ($row = $stmt ->fetch(PDO::FETCH_BOTH)) ?>
     <section class="conteiner-carousel">    
         <div class="container__generosIndex">
-        <img class="filme" src="<?php echo $row[8] ?>" alt="Cartaz A Viagem de Chihiro" class="proporcaoFilme">
+        <img class="filme" src="<?php echo $row[8] ?>" alt="Cartaz Yu-Gi-Oh" class="proporcaoFilme">
+        <div id="container_destaque">
+        <p class=container_destaque__info><?php echo $row[1]; ?> </p><br>
+         <p> <?php echo $row[6]; ?> <p>
+            </div>
         </div>
-        <?php } ?>
     </section>
 
     <h1 class="titulo">Terror</h1>
     <?php
-                $stmt = $pdo->prepare("SELECT * FROM `filmes` WHERE id_filme = 5 or id_filme = 6 or id_filme = 7;");	
+                $stmt = $pdo->prepare("SELECT * FROM `filmes` WHERE id_filme = 5");	
                 $stmt ->execute();
                 
-                while($row = $stmt ->fetch(PDO::FETCH_BOTH)) { ?>
+                ($row = $stmt ->fetch(PDO::FETCH_BOTH)) ?>
     <section class="conteiner-carousel">    
         <div class="container__generosIndex">
-        <img class="filme" src="<?php echo $row[8] ?>" alt="Cartaz A Viagem de Chihiro" class="proporcaoFilme">
+        <img class="filme" src="<?php echo $row[8] ?>" alt="Cartaz Invocação do Mal" class="proporcaoFilme">
+        <div id="container_destaque">
+        <p class=container_destaque__info><?php echo $row[1]; ?> </p><br>
+         <p> <?php echo $row[6]; ?> <p>
+            </div>
         </div>
-        <?php } ?>
     </section>
 
     <h1 class="titulo">Ação e Aventura</h1>
     <?php
-                $stmt = $pdo->prepare("SELECT * FROM `filmes` WHERE id_filme = 8 or id_filme = 9 or id_filme = 10;");	
+                $stmt = $pdo->prepare("SELECT * FROM `filmes` WHERE id_filme = 8");	
                 $stmt ->execute();
                 
-                while($row = $stmt ->fetch(PDO::FETCH_BOTH)) { ?>
-    <section class="container-carousel">   
+                ($row = $stmt ->fetch(PDO::FETCH_BOTH)) ?>
+    <section class="conteiner-carousel">    
         <div class="container__generosIndex">
-        <img class="filme" src="<?php echo $row[8] ?>" alt="Cartaz A Viagem de Chihiro" class="proporcaoFilme">
+        <img class="filme" src="<?php echo $row[8] ?>" alt="Cartaz Yu-Gi-Oh" class="proporcaoFilme">
+        <div id="container_destaque">
+        <p class=container_destaque__info><?php echo $row[1]; ?> </p><br>
+         <p> <?php echo $row[6]; ?> <p>
+            </div>
         </div>
-        <?php } ?>
     </section>
-</div>
+
+
+    <?php
+                $stmt = $pdo->prepare("SELECT * FROM `contato` WHERE id_contato = 2");	
+                $stmt ->execute();
+                
+                ($row = $stmt ->fetch(PDO::FETCH_BOTH)) ?>
+    <div>
+        <?php echo "Usuário: $row[1]"; ?> <br>
+        <h6><?php echo "Assunto:$row[3]"; ?><br>
+        <?php echo "Mensagem: $row[4]";?>
+    </div> 
 
 </body>
 </html>
