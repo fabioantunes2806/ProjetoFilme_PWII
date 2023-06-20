@@ -1,4 +1,4 @@
-<title>Cadastro de Gênero</title>
+<title>Cadastro de Filme</title>
 
 <?php include("conexao.php"); ?>
 

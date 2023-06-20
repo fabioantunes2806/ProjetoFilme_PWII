@@ -23,8 +23,16 @@
 
     <p> <?php echo "Nome: $row[1]"; ?> </p></br>
     <p> <?php echo "Duração: $row[2]"; ?> </p></br>
-    <p> <?php echo "Classificação Indicativa: $row[3]"; ?> </p></br>
-    <p> <?php echo "Gênero: $row[4]"; ?> </p></br>
+    <?php   $stmt = $pdo->prepare("SELECT * FROM `class_ind` WHERE id_classind = $row[3]");	
+    $stmt ->execute();
+
+    ($row1 = $stmt ->fetch(PDO::FETCH_BOTH)); ?>
+    <p> <?php echo "Classificação Indicativa: $row1[1]"; ?> </p></br>
+    <?php   $stmt = $pdo->prepare("SELECT * FROM `genero` WHERE id_genero = $row[4]");	
+    $stmt ->execute();
+
+    ($row2 = $stmt ->fetch(PDO::FETCH_BOTH)); ?>
+    <p> <?php echo "Gênero: $row2[1]"; ?> </p></br>
     <p> <?php echo "Diretor: $row[5]"; ?> </p></br>
     <p> <?php echo "Sinopse: $row[6]"; ?> </p></br>
     <p> <?php echo "Lançamento: $row[7]"; ?> </p>
