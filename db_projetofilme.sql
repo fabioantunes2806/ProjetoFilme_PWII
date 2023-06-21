@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 20-Jun-2023 às 02:48
+-- Tempo de geração: 21-Jun-2023 às 19:52
 -- Versão do servidor: 8.0.31
 -- versão do PHP: 8.0.26
 
@@ -60,14 +60,15 @@ CREATE TABLE IF NOT EXISTS `contato` (
   `assunto_ctt` varchar(250) NOT NULL,
   `mensagem_ctt` varchar(1000) NOT NULL,
   PRIMARY KEY (`id_contato`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Extraindo dados da tabela `contato`
 --
 
 INSERT INTO `contato` (`id_contato`, `nome_ctt`, `email_ctt`, `assunto_ctt`, `mensagem_ctt`) VALUES
-(1, 'teste', 'teste@teste', 'teste', 'testando 123');
+(1, 'teste', 'teste@teste', 'teste', 'testando 123'),
+(2, 'Jorjin', 'jorjehenrique@gmail.com', 'Parabéns', 'Site incrível e com ótima funcionalidade, parabéns! Os devs merecem MB.');
 
 -- --------------------------------------------------------
 
@@ -89,7 +90,7 @@ CREATE TABLE IF NOT EXISTS `filmes` (
   `img_sec` varchar(1000) NOT NULL,
   PRIMARY KEY (`id_filme`),
   KEY `id_genero` (`id_genero`)
-) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Extraindo dados da tabela `filmes`
@@ -97,7 +98,7 @@ CREATE TABLE IF NOT EXISTS `filmes` (
 
 INSERT INTO `filmes` (`id_filme`, `Nome_filme`, `duracao`, `id_classind`, `id_genero`, `diretor`, `sinopse`, `lancamento`, `img_main`, `img_sec`) VALUES
 (1, 'A Viagem de Chihiro', '2h 5m', '1', 1, 'Hayao Miyazaki', 'Chihiro e seus pais estão se mudando para uma cidade diferente. A caminho da nova casa, o pai decide pegar um atalho. Eles se deparam com uma mesa repleta de comida, embora ninguém esteja por perto. Chihiro sente o perigo, mas seus pais começam a comer. Quando anoitece, eles se transformam em porcos. Agora, apenas Chihiro pode salvá-los.', '2001', '../estruturas/img/chihiro.jpg', '../estruturas/img/a viagem de chihiro.png'),
-(2, 'One Piece Film: Red', '1h 55m', '3', 3, 'Gorō Taniguchi', 'Em One Piece Film RED todos conhecerão Uta, a cantora mais amada do planeta, cuja voz foi descrita              como “de outro mundo”. Ela é conhecida por esconder sua própria identidade ao se apresentar. Agora,              pela primeira vez, Uta se revelará ao mundo em um show ao vivo. Com a Marinha assistindo de perto, o local              se enche de fãs de Uta - incluindo piratas animados e os Chapéus de Palha liderados por Luffy, que vieram              para curtir sua performance - todos aguardam ansiosamente a voz que o mundo inteiro estava esperando.', '2022', '../estruturas/img/opred.jpg', '../estruturas/img/oprbanner.jpg'),
+(2, 'One Piece Film: Red', '1h 55m', '3', 1, 'Gorō Taniguchi', 'Em One Piece Film RED todos conhecerão Uta, a cantora mais amada do planeta, cuja voz foi descrita              como “de outro mundo”. Ela é conhecida por esconder sua própria identidade ao se apresentar. Agora,              pela primeira vez, Uta se revelará ao mundo em um show ao vivo. Com a Marinha assistindo de perto, o local              se enche de fãs de Uta - incluindo piratas animados e os Chapéus de Palha liderados por Luffy, que vieram              para curtir sua performance - todos aguardam ansiosamente a voz que o mundo inteiro estava esperando.', '2022', '../estruturas/img/opred.jpg', '../estruturas/img/oprbanner.jpg'),
 (3, 'Yu-Gi-Oh! O Lado Negro das Dimensões', '2h 11m', '3', 1, 'Satoshi Kuwabara', 'No passado, Yami Yugi e Seto Kaiba se enfrentaram em inúmeras ocasiões. Yami Yugi, que habita dentro do corpo de Yugi Muto, e Kaiba vão duelar novamente, e esta será uma batalha em que os dois terão seu orgulho e experiência colocados à prova.', '2016', '../estruturas/img/yugioh.jpg', '../estruturas/img/dsod_banner.jpg'),
 (4, 'Malévola: Dona do Mal', '1h 51m', '2', 1, 'Joachim Rønning', 'Malévola e sua afilhada Aurora começam a questionar os complexos laços familiares que as prendem à medida que são puxadas em direções diferentes por casamentos, aliados inesperados e novas forças sombrias em jogo.', '2019', '../estruturas/img/malevola.jpg', '../estruturas/img/Malevolabanner.retang.jpg'),
 (5, 'Invocação do Mal', '1h 52m', '4', 2, 'James Wan', 'Os investigadores paranormais Ed e Lorraine Warren trabalham para ajudar a família aterrorizada por uma entidade demoníaca em sua fazenda.', '2013', '../estruturas/img/invocacaoDoMal1.jpg', '../estruturas/img/the-conjuring-banner.jpg'),
@@ -143,7 +144,7 @@ CREATE TABLE IF NOT EXISTS `tbusuario` (
   `email` varchar(40) DEFAULT NULL,
   `senha` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id_usuario`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Extraindo dados da tabela `tbusuario`
