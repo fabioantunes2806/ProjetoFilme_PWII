@@ -13,7 +13,7 @@
 							<div class="card-filme">
 								<div class="center-wrap">
 									<div class="text-center">
-                                        <h4>Cadastro de Gênero</h4>
+                                        <h4>Cadastro de Filme</h4>
                                         <form action="filme-salvar.php" enctype="multipart/form-data" method="post">      
                                             <div class="form-group">
                                                 <input type="text" class="form-style" placeholder="Nome do Filme" name="txNomeFilme" />

@@ -19,20 +19,17 @@ include("../estruturas/cabecalho.php")?>
   <div>
   <h2>Pesquisar filme</h2>
   </div>
-
   <form method="post">
     <div>
       <input type="text" placeholder="Nome do filme" name="txPesquisar" required />
     </div>  
-
     <div>
       <button> Pesquisar </button>
     </div>  
-
     </form>
   </section>
 
-
+  <!-- Tabela -->
     <section>
         <table class="table table-striped">
             <thead>

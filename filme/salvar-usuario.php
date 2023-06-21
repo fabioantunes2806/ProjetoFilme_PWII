@@ -11,7 +11,7 @@
     $consulta->execute();
 
     if ($consulta->rowCount() == 1) {
-        echo "E-mail já cadastrado";
+        echo"E-mail já cadastrado";
     }else{
         $stmt = $pdo->prepare("insert into tbusuario
         values(null,'$nome','$emailuser','$senhauser')");	    

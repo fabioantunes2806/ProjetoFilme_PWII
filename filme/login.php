@@ -94,7 +94,7 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
 								<div class="center-wrap">
 									<div class="section text-center">
 										<h4>Sign Up</h4>
-										<form action="salvar-usuario.php" onsubmit="sucesso()" method="post">
+										<form action="salvar-usuario.php" onsubmit="sucesso()"  method="post">
 											<div class="form-group">
 												<input type="text" name="regName" required class="form-style" placeholder="Seu Username" id="regName" autocomplete="off">
 												<i class="input-icon uil uil-user"></i>
