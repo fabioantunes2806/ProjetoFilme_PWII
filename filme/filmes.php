@@ -12,7 +12,7 @@
     
 <title>Filmes</title>
 
-<section>
+
 <?php
                 $stmt = $pdo->prepare("select * from filmes where Nome_filme = 'One Piece Film: Red'");	
                 $stmt ->execute();
@@ -20,30 +20,25 @@
     ($row = $stmt ->fetch(PDO::FETCH_BOTH)); ?>
 
 <div class="background">
-    <h1 class="titulo">Destaque</h1>
-    <div class="container">  
-        <img id="imgDestaque" src="<?php echo $row[8] ?>" alt="Capa One Piece Film: RED">
-        <div id="container_destaque">          
-            <p><strong>DIRETOR DE ANIMAÇÃO</strong></p><br>
-            <p class="container_destaque__info"><?php echo "<td> $row[5] </td>" ?></p><br>
-            <p><strong>RESUMO</strong></p><br>
-            <p class="container_destaque__info"><?php echo "<td> $row[6] </td>" ?></p><br>
-            <p><strong>Gênero</strong></p><br>
-            <p class="container_destaque__info"><?php
-                        $stmt = $pdo->prepare("select * from genero where id_genero=4");	
-                        $stmt ->execute();            
-                        ($row = $stmt ->fetch(PDO::FETCH_BOTH));
-                         echo $row[1];  ?></p>
-        </div>
-    </div>
-</section>
+    <h2 class="titulo">Fantasia</h2>
+    <div class="container-filmes">
+        <?php
+            /*$stmt = $pdo->prepare("SELECT * FROM `filmes` WHERE id_genero = 1");	*/
+            $stmt = $pdo->prepare("SELECT * FROM `filmes` WHERE id_filme in (1,3,4,5,6,7,8,9,10)");
+            $stmt ->execute();
+            while($row = $stmt ->fetch(PDO::FETCH_BOTH)) { ?>
+                <a href="../estruturas/filme-individual.php?idfilme=<?php echo $row[0] ?>">
+                    <img class="filme" src="<?php echo $row[8] ?>" alt="Cartaz A Viagem de Chihiro" class="proporcaoFilme">
+                </a>
+        <?php } ?>
+    </div>   
+
 
     <button class="handle left-handle">
         <div class="text">&#8249;</div>
     </button>
     <?php
-                $stmt = $pdo->prepare("SELECT * FROM `filmes` WHERE id_filme = 1 or id_filme = 3 or id_filme = 4 or id_filme = 5 or id_filme = 6 or id_filme = 7
-                or id_filme = 8 or id_filme = 9 or id_filme = 10;");	
+                $stmt = $pdo->prepare("SELECT * FROM `filmes` WHERE id_filme in (1,3,4,5,6,7,8,9,10)");	
                 $stmt ->execute();
                 
                 while($row = $stmt ->fetch(PDO::FETCH_BOTH)) { ?>
@@ -69,7 +64,7 @@
      <a href="../estruturas/filme-individual.php?idfilme=<?php echo $row[0] ?>">
     <section class="conteiner-carousel">    
         <div class="container__generosIndex">
-        <img class="filme" src="<?php echo $row[8] ?>" alt="Cartaz A Viagem de Chihiro" class="proporcaoFilme">
+            <img class="filme" src="<?php echo $row[8] ?>" alt="Cartaz A Viagem de Chihiro" class="proporcaoFilme">
         </div>
         <?php } ?>
     </section>

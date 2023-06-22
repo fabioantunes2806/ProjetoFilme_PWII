@@ -52,7 +52,7 @@ include("../estruturas/cabecalho.php")?>
 
               if(isset($_POST['txPesquisar'])){
                 $nome = $_POST['txPesquisar'];
-                $stmt = $pdo -> prepare("SELECT * FROM filmes where Nome_filme = '$nome'");
+                $stmt = $pdo -> prepare("SELECT * FROM filmes where Nome_filme like '%$nome%'");
               }else{
                 $stmt = $pdo->prepare("select * from filmes");	
               }

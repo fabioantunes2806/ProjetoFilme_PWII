@@ -32,7 +32,7 @@ CREATE TABLE IF NOT EXISTS `class_ind` (
   `id_classind` int NOT NULL AUTO_INCREMENT,
   `class_ind` varchar(7) NOT NULL,
   PRIMARY KEY (`id_classind`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+); 
 
 --
 -- Extraindo dados da tabela `class_ind`
@@ -60,7 +60,7 @@ CREATE TABLE IF NOT EXISTS `contato` (
   `assunto_ctt` varchar(250) NOT NULL,
   `mensagem_ctt` varchar(1000) NOT NULL,
   PRIMARY KEY (`id_contato`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+);
 
 --
 -- Extraindo dados da tabela `contato`
@@ -90,7 +90,7 @@ CREATE TABLE IF NOT EXISTS `filmes` (
   `img_sec` varchar(1000) NOT NULL,
   PRIMARY KEY (`id_filme`),
   KEY `id_genero` (`id_genero`)
-) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+);
 
 --
 -- Extraindo dados da tabela `filmes`
@@ -119,7 +119,7 @@ CREATE TABLE IF NOT EXISTS `genero` (
   `id_genero` int NOT NULL AUTO_INCREMENT,
   `Genero` varchar(250) NOT NULL,
   PRIMARY KEY (`id_genero`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+);
 
 --
 -- Extraindo dados da tabela `genero`
@@ -144,7 +144,7 @@ CREATE TABLE IF NOT EXISTS `tbusuario` (
   `email` varchar(40) DEFAULT NULL,
   `senha` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id_usuario`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+);
 
 --
 -- Extraindo dados da tabela `tbusuario`

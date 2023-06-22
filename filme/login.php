@@ -1,38 +1,7 @@
 <?php include("../estruturas/cabecalho-visitante.php");
     
-    include('conexao.php');
+	include('conexao.php');
 
-if(isset($_POST['email']) || isset($_POST['senha'])) {
-
-   
-
-        $email = $mysqli->real_escape_string($_POST['email']);
-        $senha = $mysqli->real_escape_string(sha1($_POST['senha']));
-    
-        $sql_code = "SELECT * FROM tbusuario WHERE email = '$email' AND senha = '$senha'";
-        $sql_query = $mysqli->query($sql_code) or die("Falha na execução do código SQL: " . $mysqli->error);
-
-        $quantidade = $sql_query->num_rows;
-
-        if($quantidade == 1) {
-
-            $usuario = $sql_query->fetch_assoc();
-
-            if(!isset($_SESSION)) {
-                session_start();
-            }
-
-            $_SESSION['id_usuario'] = $usuario['id_usuario'];
-            $_SESSION['username'] = $usuario['username'];
-
-            header("Location: index-usuario.php");
-
-        } else {
-            echo "Falha ao logar! E-mail ou senha incorretos.";
-        }
-
-    }
-	
 ?>
 
 <!DOCTYPE html>
@@ -76,6 +45,37 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
 									<div class="section text-center">
 										<h4>Log In</h4>
 										<form action="" method="post">
+											<div class="msg-error">
+												<?php
+													if(isset($_POST['email']) || isset($_POST['senha'])) {
+
+														$email = $mysqli->real_escape_string($_POST['email']);
+														$senha = $mysqli->real_escape_string(sha1($_POST['senha']));
+													
+														$sql_code = "SELECT * FROM tbusuario WHERE email = '$email' AND senha = '$senha'";
+														$sql_query = $mysqli->query($sql_code) or die("Falha na execução do código SQL: " . $mysqli->error);
+												
+														$quantidade = $sql_query->num_rows;
+
+														if($quantidade == 1) {
+
+															$usuario = $sql_query->fetch_assoc();
+												
+															if(!isset($_SESSION)) {
+																session_start();
+															}
+												
+															$_SESSION['id_usuario'] = $usuario['id_usuario'];
+															$_SESSION['username'] = $usuario['username'];
+												
+															header("Location: index-usuario.php");
+												
+														} else {
+															echo "Falha ao logar! E-mail ou senha incorretos.";
+														}
+													}																
+												?>
+											</div>
 											<div class="form-group">
 												<input type="email" name="email" required class="form-style" placeholder="Seu Email" id="logEmail" autocomplete="off">
 												<i class="input-icon uil uil-at"></i>

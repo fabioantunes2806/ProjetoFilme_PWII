@@ -178,6 +178,11 @@ h6 span{
   transition: all 200ms linear;
   box-shadow: 0 4px 8px 0 rgba(21,21,21,.2);
 }
+.msg-error{
+  text-align: center;
+  color: goldenrod;  
+  font-size: 14px;
+}
 .form-style:focus,
 .form-style:active {
   border: none;
@@ -327,4 +332,21 @@ h6 span{
   border-radius: 6px;
   left: 0;
   top: -12.5%; 
+}
+.container-filmes{
+  display: flex;
+  flex-direction: row;
+  width: 80vw;
+  height: 30vh;
+  text-align: center;
+  margin-left: 10vw;
+}
+.filme{
+  width: 20%;
+  padding: 0 10px;
+}
+.filme:hover{
+  transform: scale(1.02);
+  cursor: pointer;
+  filter: blur(.51px);
 }

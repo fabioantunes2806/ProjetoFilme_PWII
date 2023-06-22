@@ -1,9 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
 
-*,*::after,*::before{
-    box-sizing: border-box;
-}
 #cabecalho {
   display: flex;
   background-color: #121212;
@@ -62,9 +59,12 @@
 
 
 .background{
-    background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat.svg');
-    background-size: 120%;
-  }
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat.svg');
+  background-size: 120%;
+}
   
 .titulo{
     width: 70%;
@@ -73,9 +73,7 @@
     margin: 3% 7%;
     color: #ffeba7;
 }
-.background{
-  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat.svg');
-}
+
 .container{
     display: flex;
     flex-direction: row;
@@ -107,10 +105,6 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-}
-
-.filme{
-    width: 22%;
 }
 
 
