@@ -8,6 +8,8 @@ body{
 	color: #c4c3ca;
 	background-color: #2a2b38;
 	overflow-x: hidden;
+  position: relative;
+  min-height: 100%;
 }
 
 
@@ -333,20 +335,52 @@ h6 span{
   left: 0;
   top: -12.5%; 
 }
+
+
 .container-filmes{
   display: flex;
   flex-direction: row;
   width: 80vw;
-  height: 30vh;
+  height: 50vh;
   text-align: center;
+  justify-content: center;
   margin-left: 10vw;
 }
-.filme{
-  width: 20%;
+
+.filmes{
+  display: flex;
+  flex-flow: row nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  text-align: center;
+  white-space: nowrap; /*parte que limita o tamanho da div com os filmes */
+  width: 80%;
   padding: 0 10px;
+} 
+
+.filmes::-webkit-scrollbar {
+  /*display: none;*/
 }
+.filmes {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.filme{
+  width: 17vw;
+  height: 100%;
+}
+
 .filme:hover{
   transform: scale(1.02);
   cursor: pointer;
   filter: blur(.51px);
 }
+
+.pagecontainer{
+  position: relative;
+  min-height: 100vh;
+}
+
+
+

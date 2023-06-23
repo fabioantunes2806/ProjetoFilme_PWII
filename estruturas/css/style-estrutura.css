@@ -61,7 +61,7 @@
 .background{
   left: 0;
   width: 100vw;
-  height: 100vh;
+  height: 80vh;
   background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat.svg');
   background-size: 120%;
 }
@@ -112,7 +112,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative  ;
+    position: relative;
     bottom: 0;
     left: 0;
     width: 100%;
