@@ -45,4 +45,4 @@ include("../estruturas/cabecalho.php")?>
     </div>
 
 
-    <?php include("../estruturas/rodape.php")?>
+    <?php include("../estruturas/rodape-form.php")?>

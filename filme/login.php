@@ -122,6 +122,6 @@
 			</div>
 		</div>
 	</div>
-<?php include("../estruturas/rodape.php")?>
+<?php include("../estruturas/rodape-form.php")?>
 </body>
 </html>
