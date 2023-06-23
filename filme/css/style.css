@@ -359,7 +359,7 @@ h6 span{
 } 
 
 .filmes::-webkit-scrollbar {
-  display: none;
+ /* display: none; */
 }
 .filmes {
   -ms-overflow-style: none;
