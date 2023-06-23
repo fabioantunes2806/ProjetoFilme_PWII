@@ -78,8 +78,9 @@
     display: flex;
     flex-direction: row;
     box-sizing: border-box;
-    width: 80%;
+    width: 80vw;
     margin: auto 10% auto auto;
+    position: relative;
 }
 
 #imgDestaque{
@@ -107,6 +108,71 @@
     justify-content: space-between;
 }
 
+.backgroundImage{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  filter: blur(20px);
+}
+.proporcaoFilme{
+  position: absolute;
+  width: 80vw;
+  height: 85vh;
+  left: 50%;
+  top: 65%;
+  transform: translate(-50%, -50%);
+}
+.descFilme{
+  display: flex;
+  color: #1e1e1e ;
+  -webkit-text-stroke-width: .5px;
+  -webkit-text-stroke-color: black;
+  position: absolute;
+  width: 80vw;
+  height: 85vh;
+  left: 50%;
+  top: 65%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+}
+.infoFilme{
+  box-sizing: border-box;
+  width: 35%;
+  margin: 12% 7%;
+  padding: 5px;
+}
+.infoFilme .titleFilme{
+  text-align: center;
+  font-size: 44px;
+}
+.infoFilme p,
+.infoFilmeExtra p{
+  background-color: rgba(189, 195, 199, 0.25);
+  backdrop-filter: blur(3px);
+  border-radius: 10px;
+  padding: 10px;
+}
+.infoFilmeExtra{
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  align-content: center;
+  text-align: center;
+  justify-content: end;
+  width: 25%;
+  height: 100%;
+  right: 0;
+  text-align: left;
+  border-left: 3px solid rgba(255, 215, 137, .75);
+  
+}
+.infoFilmeExtra p{
+  margin: 30px;
+  padding: 5px;
+}
 
 #rodape{
     display: flex;
@@ -121,3 +187,4 @@
     background-color: #121212;
     color: aliceblue;
 }
+

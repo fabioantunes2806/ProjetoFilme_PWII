@@ -1,4 +1,11 @@
-<?php include("../estruturas/cabecalho.php")?>
+<?php 
+include('..\filme\protect.php');
+
+if(!isset($_SESSION)) {
+    session_start();
+}
+
+include("../estruturas/cabecalho.php")?>
 
     <title>Contato</title>
 

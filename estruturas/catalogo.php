@@ -19,22 +19,23 @@
             ($row = $stmt ->fetch(PDO::FETCH_BOTH)); ?>
 
             <h1 class="titulo">Destaque</h1>
-            <div class="container">  
-                <img id="imgDestaque" src="<?php echo $row[8] ?>" alt="Capa One Piece Film: RED">
-                <div id="container_destaque">          
-                    <p><strong>DIRETOR DE ANIMAÇÃO</strong></p><br>
-                    <p class="container_destaque__info"><?php echo "<td> $row[5] </td>" ?></p><br>
-                    <p><strong>RESUMO</strong></p><br>
-                    <p class="container_destaque__info"><?php echo "<td> $row[6] </td>" ?></p><br>
-                    <p><strong>Gênero</strong></p><br>
-                    <p class="container_destaque__info"><?php
+            <div class="container"> 
+                <div class="container__generosIndex"> 
+                    <img id="imgDestaque" src="<?php echo $row[8] ?>" alt="Capa One Piece Film: RED"> 
+                    <div id="container_destaque">          
+                        <p><strong>DIRETOR DE ANIMAÇÃO</strong></p><br>
+                        <p class="container_destaque__info"><?php echo "<td> $row[5] </td>" ?></p><br>
+                        <p><strong>RESUMO</strong></p><br>
+                        <p class="container_destaque__info"><?php echo "<td> $row[6] </td>" ?></p><br>
+                        <p><strong>Gênero</strong></p><br>
+                        <p class="container_destaque__info"><?php 
                                 $stmt = $pdo->prepare("select * from genero where id_genero=4");	
-                                $stmt ->execute();            
-                                ($row = $stmt ->fetch(PDO::FETCH_BOTH));
-                                echo $row[1];  ?></p>
-                </div>
-            </div>
-
+                                    $stmt ->execute();            
+                                    ($row = $stmt ->fetch(PDO::FETCH_BOTH));
+                                    echo $row[1];  ?></p> 
+                                    </div>
+                    </div>
+                </div> 
 
             <h1 class="titulo">Fantasia</h1>
             <?php
@@ -42,7 +43,7 @@
                         $stmt ->execute();
                         
                         ($row = $stmt ->fetch(PDO::FETCH_BOTH)) ?>
-            <section class="conteiner-carousel">    
+            <section class="container">    
                 <div class="container__generosIndex">
                 <img class="filme" src="<?php echo $row[8] ?>" alt="Cartaz Yu-Gi-Oh" class="proporcaoFilme">
                 <div id="container_destaque">
@@ -58,7 +59,7 @@
                         $stmt ->execute();
                         
                         ($row = $stmt ->fetch(PDO::FETCH_BOTH)) ?>
-            <section class="conteiner-carousel">    
+            <section class="container">    
                 <div class="container__generosIndex">
                 <img class="filme" src="<?php echo $row[8] ?>" alt="Cartaz Invocação do Mal" class="proporcaoFilme">
                 <div id="container_destaque">
@@ -74,7 +75,7 @@
                         $stmt ->execute();
                         
                         ($row = $stmt ->fetch(PDO::FETCH_BOTH)) ?>
-            <section class="conteiner-carousel">    
+            <section class="container">    
                 <div class="container__generosIndex">
                 <img class="filme" src="<?php echo $row[8] ?>" alt="Cartaz Yu-Gi-Oh" class="proporcaoFilme">
                 <div id="container_destaque">
