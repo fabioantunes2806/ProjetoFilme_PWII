@@ -339,6 +339,9 @@ h6 span{
 
 .container-filmes{
   display: flex;
+  grid-template-columns: repeat(3,100%);
+  overflow:hidden;
+  scroll-behavior: smooth;
   flex-direction: row;
   width: 80vw;
   height: 50vh;
@@ -346,37 +349,91 @@ h6 span{
   justify-content: center;
   margin-left: 10vw;
 }
-
-.filmes{
+.setas{
+  width: 80%;
+  position: relative;
+  margin: 20px 0;
   display: flex;
   flex-flow: row nowrap;
   overflow-x: auto;
   overflow-y: hidden;
   text-align: center;
-  white-space: nowrap; /*parte que limita o tamanho da div com os filmes */
-  width: 80%;
+  white-space: nowrap; /*parte que limita o tamanho da div com os filmes*/
+  padding: 0 10px;
+  z-index: 1;
+}
+.filmes{
+  width: 100%;
+  position: relative;
+  grid-template-columns: repeat(5, auto);
+  margin: 20px 0;
+  display: flex;
+  flex-flow: row nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  text-align: center;
+  white-space: nowrap; /*parte que limita o tamanho da div com os filmes*/
   padding: 0 10px;
 } 
-
+.filmes a{
+  position: relative;
+  color: #fff;
+  text-decoration: none;
+  font-size: 6em;
+  width: 13vw;
+  padding: 15px;
+  text-align: center;
+}
 .filmes::-webkit-scrollbar {
- /* display: none; */
+ display: none;
 }
 .filmes {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
-
 .filme{
-  width: 17vw;
+  width: 12vw;
   height: 100%;
+  transition: 200ms all;
 }
 
 .filme:hover{
+  margin: 0 10px;
+  /*transform: scale(1.2);*/
   transform: scale(1.02);
   cursor: pointer;
   filter: blur(.51px);
 }
-
+.arrow-left,
+.arrow-right {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: auto;
+  bottom: 0;
+  font-size: 20px;
+  line-height: 250px;
+  justify-content: center;
+  width: 40px;
+  color: #fff;
+  transition: all 600ms ease-in-out;
+  background: linear-gradient(to left, transparent 0%, black 200%);
+  opacity: 0.1;
+  cursor: pointer;
+  border: none;
+  z-index: 1;
+}
+.arrow-left:hover,
+.arrow-right:hover {
+  opacity: 1;
+}
+.arrow-right {
+  position: absolute;
+  right: 0;
+  left: auto;
+  text-align: right;
+  background: linear-gradient(to right, transparent 0%, black 200%);
+}
 .pagecontainer{
   position: relative;
   min-height: 100vh;
