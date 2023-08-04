@@ -12,18 +12,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
 
+	<!-- Abrindo script -->
 	<script>
-		function confereSenha() {
+		// Abrindo função confere senha 
+		function confereSenha() {		
+			// Variáveis para o campo da senha e o campo de conferir senha
 			const regPass = document.querySelector('input[name=regPass]');
 			const regConfirm = document.querySelector('input[name=regConfirm]');
 
+			// Se os campos coincidirem, prosseguir, se não, emitir mensagem
 			if(regConfirm.value === regPass.value) {
 				regConfirm.setCustomValidity('');
 			} else {
 				regConfirm.setCustomValidity('As senhas não conferem');
 			}
 		}
-
+		// Fução para emitir alerta de sucesso ao cadastrar
 		function sucesso() {
 			alert("Usuário cadastrado com sucesso! :)")
 		}
@@ -47,6 +51,7 @@
 										<form action="" method="post">
 											<div class="msg-error">
 												<?php
+													// Verificação se o email e senha coincidem com o banco
 													if(isset($_POST['email']) || isset($_POST['senha'])) {
 
 														$email = $mysqli->real_escape_string($_POST['email']);
